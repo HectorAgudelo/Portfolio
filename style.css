@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@1,200&family=Raleway:wght@600&display=swap&effect=3d|3d-float");
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
+html,body,div{
+  width:100%;
+}
+.bg-gradient{
+  height: 100%;
+  background-image:linear-gradient(rgb(247, 243, 243),rgb(173, 173, 212))}
+
+
+/* NAVBAR */
+
+.collapse {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-family: abril fatface;
+  text-shadow: 1px 1px 1px #aaa;
+}
+
+.navbar-brand:hover {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  text-shadow: 1px 1px #aaa, 2px 2px #aaa, 3px 3px #aaa, 4px 4px #aaa,
+    5px 5px #aaa, 6px 6px #aaa;
+}
+
+.navbar {
+  background-color: rgb(247, 243, 243);
+  border: currentColor;
+  box-shadow: 4px 4px 4px rgb(236, 232, 232);
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px
+}
+
+/* ABOUT */
+.container.about {
+  margin: 200px 0px 0px 0px;
+  max-width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.pic {
+  border-radius: 50%;
+  max-width: 20%;
+  height: 10%;
+  display: block;
+  margin: auto;
+  width: 50%;
+  box-shadow: 4px 4px 4px #aaa;
+  border: double;
+  border-color: #aaa;
+}
+
+h1,h5 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: raleway;
+}
+
+p,a {
+  font-family: poppins;
+}
+
+/* PORFOLIO */
+
+.portfolioTitle{
+  text-align: center;
+}
+
+.container.portfolio{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0%;
+}
+
+img{
+width: auto;
+height: 200px;
+}
+
+.card{
+  box-shadow: 4px 4px 4px #aaa;
+}
+
+/* CONTACT */
+
+.icon{
+  padding: 0%;
+ 
+}
+
+i{
+color: rgb(7, 7, 7);
+box-shadow: 10px 10px 20px rgba(42, 42, 48, 0.322);
+}
+
+footer{
+  margin-top: 10%;
+  padding-bottom: 5px;
+  background-image:linear-gradient(rgb(173, 173, 212),rgb(103, 103, 128))
+}
+
+
+.container.contact {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  max-width: 100%;
+  padding: 30px 10px 10px 10px;
+}
+
+.credit{
+  text-align: center;
+  font-size: 12px;
+  color: #83909d;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .pic {
+    max-width: 30%;
+  }
+  .container.about {
+    margin: 120px 0px 100px 0px;
+    max-width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .fa-3x{
+    font-size: 2em !important;
+  } 
+  
+  .columnPortfolio{
+    margin: 20px;
+   max-width: min-content;
+    
+  }
+  #portfolio{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .container.contact {
+    text-align: center;
+    margin: 100px 0px 0px 0px;
+    max-width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .logo{
+    padding: 0px 0px 0px 0px;
+    margin: auto;
+  }
+
+  .iconText{
+font-size: 8px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .pic {
+    max-width: 30%;
+  }
+
+  .container.contact {
+    text-align: center;
+    margin: 100px 0px 10px 0px;
+    max-width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .columnPortfolio{
+    margin: 10px;
+    max-width: none;
+  
+  }
+
+  #portfolio{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+ 
+  .logo{
+    padding: 0px 0px 0px 0px;
+    margin: auto;
+  }
+
+  .iconText{
+    font-size: 8px;
+      }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pic {
+    max-width: 30%;
+  }
+ 
+  .columnPortfolio{
+    margin: 5px;
+    max-width: none;
+  }
+
+  #portfolio{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .container.contact{
+    padding: 0px 40px 0px 40px;
+  }
+  .logo{
+    padding: 0px 10px 0px 10px;
+    margin: auto;
+  }
+  .iconText{
+    font-size: 10px;
+      }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .pic {
+    max-width: 30%;
+  }
+
+  .columnPortfolio{
+    margin: 20px;
+    max-width: none;
+  }
+
+  #portfolio{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  .columnPortfolio{
+    margin: 10px;
+    max-width: none;
+  }
+}
+
+
