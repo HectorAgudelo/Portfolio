@@ -3,13 +3,15 @@
 html.sr .load-hidden {
   visibility: hidden;
 }
-html,body,div{
-  width:100%;
+html,
+body,
+div {
+  width: 100%;
 }
-.bg-gradient{
+.bg-gradient {
   height: 100%;
-  background-image:linear-gradient(rgb(247, 243, 243),rgb(173, 173, 212))}
-
+  background-image: linear-gradient(rgb(247, 243, 243), rgb(173, 173, 212));
+}
 
 /* NAVBAR */
 
@@ -35,7 +37,7 @@ html,body,div{
   border: currentColor;
   box-shadow: 4px 4px 4px rgb(236, 232, 232);
   margin-bottom: 20px;
-  padding: 10px 20px 10px 20px
+  padding: 10px 20px 10px 20px;
 }
 
 /* ABOUT */
@@ -58,55 +60,59 @@ html,body,div{
   border-color: #aaa;
 }
 
-h1,h5 {
+.description-text {
+  text-align: justify;
+}
+
+h1,
+h5 {
   margin-top: 50px;
   margin-bottom: 20px;
   font-family: raleway;
 }
 
-p,a {
+p,
+a {
   font-family: poppins;
 }
 
 /* PORFOLIO */
 
-.portfolioTitle{
+.portfolioTitle {
   text-align: center;
 }
 
-.container.portfolio{
+.container.portfolio {
   margin-top: 100px;
   margin-bottom: 100px;
   padding: 0%;
 }
 
-img{
-width: auto;
-height: 200px;
+img {
+  width: auto;
+  height: 200px;
 }
 
-.card{
+.card {
   box-shadow: 4px 4px 4px #aaa;
 }
 
 /* CONTACT */
 
-.icon{
+.icon {
   padding: 0%;
- 
 }
 
-i{
-color: rgb(7, 7, 7);
-box-shadow: 10px 10px 20px rgba(42, 42, 48, 0.322);
+i {
+  color: rgb(7, 7, 7);
+  box-shadow: 10px 10px 20px rgba(42, 42, 48, 0.322);
 }
 
-footer{
+footer {
   margin-top: 10%;
   padding-bottom: 5px;
-  background-image:linear-gradient(rgb(173, 173, 212),rgb(103, 103, 128))
+  background-image: linear-gradient(rgb(173, 173, 212), rgb(103, 103, 128));
 }
-
 
 .container.contact {
   text-align: center;
@@ -115,20 +121,19 @@ footer{
   padding: 30px 10px 10px 10px;
 }
 
-.credit{
+.credit {
   text-align: center;
   font-size: 12px;
   color: #83909d;
 }
 
-
 /* MEDIA QUERIES */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .navbar-brand{
-font-size: 15px;
-padding: 0px;
+  .navbar-brand {
+    font-size: 15px;
+    padding: 0px;
   }
 
   .pic {
@@ -140,16 +145,15 @@ padding: 0px;
     padding-left: 10%;
     padding-right: 10%;
   }
-  .fa-3x{
+  .fa-3x {
     font-size: 2em !important;
-  } 
-  
-  .columnPortfolio{
-    margin: 20px;
-   max-width: min-content;
-    
   }
-  #portfolio{
+
+  .columnPortfolio {
+    margin: 20px;
+    max-width: min-content;
+  }
+  #portfolio {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -161,14 +165,14 @@ padding: 0px;
     padding-left: 0%;
     padding-right: 0%;
   }
-  
-  .logo{
+
+  .logo {
     padding: 0px 0px 0px 0px;
     margin: auto;
   }
 
-  .iconText{
-font-size: 8px;
+  .iconText {
+    font-size: 8px;
   }
 }
 
@@ -186,25 +190,24 @@ font-size: 8px;
     padding-right: 0%;
   }
 
-  .columnPortfolio{
+  .columnPortfolio {
     margin: 10px;
     max-width: none;
-  
   }
 
-  #portfolio{
+  #portfolio {
     padding-left: 10%;
     padding-right: 10%;
   }
- 
-  .logo{
+
+  .logo {
     padding: 0px 0px 0px 0px;
     margin: auto;
   }
 
-  .iconText{
+  .iconText {
     font-size: 8px;
-      }
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -212,26 +215,26 @@ font-size: 8px;
   .pic {
     max-width: 50%;
   }
- 
-  .columnPortfolio{
+
+  .columnPortfolio {
     margin: 5px;
     max-width: none;
   }
 
-  #portfolio{
+  #portfolio {
     padding-left: 10%;
     padding-right: 10%;
   }
-  .container.contact{
+  .container.contact {
     padding: 0px 40px 0px 40px;
   }
-  .logo{
+  .logo {
     padding: 0px 10px 0px 10px;
     margin: auto;
   }
-  .iconText{
+  .iconText {
     font-size: 10px;
-      }
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -240,25 +243,21 @@ font-size: 8px;
     max-width: 40%;
   }
 
-  .columnPortfolio{
+  .columnPortfolio {
     margin: 20px;
     max-width: none;
   }
 
-  #portfolio{
+  #portfolio {
     padding-left: 10%;
     padding-right: 10%;
   }
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
-  .columnPortfolio{
+  .columnPortfolio {
     margin: 10px;
     max-width: none;
   }
 }
-
-
