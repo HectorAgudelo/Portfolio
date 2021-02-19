@@ -47,9 +47,9 @@ html,body,div{
 }
 
 .pic {
-  border-radius: 50%;
-  max-width: 20%;
-  height: 10%;
+  border-radius: 40%;
+  max-width: 30%;
+  height: 15%;
   display: block;
   margin: auto;
   width: 50%;
@@ -132,7 +132,7 @@ padding: 0px;
   }
 
   .pic {
-    max-width: 30%;
+    max-width: 40%;
   }
   .container.about {
     margin: 120px 0px 100px 0px;
@@ -175,7 +175,7 @@ font-size: 8px;
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .pic {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .container.contact {
@@ -210,7 +210,7 @@ font-size: 8px;
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .pic {
-    max-width: 30%;
+    max-width: 50%;
   }
  
   .columnPortfolio{
@@ -237,7 +237,7 @@ font-size: 8px;
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .pic {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .columnPortfolio{
