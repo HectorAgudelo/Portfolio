@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 import CanvasBackground from '../../images/markus-spiske-GXBF7vaC6L8-unsplash.jpeg';
-import NavigationBAr from './NavigationBar.css'
+import './NavigationBar.css';
 
 export const NavigationBar = () => {
   return (
@@ -23,11 +23,11 @@ export const NavigationBar = () => {
           aria-labelledby='offcanvasNavbarLabel'
           placement='end'
           style={{
-            backgroundImage: `url(${CanvasBackground})`,
+            backgroundImage: `linear-gradient(to left, transparent,1%, black),url(${CanvasBackground})`,
             backgroundSize: 'cover',
           }}
         >
-          <Offcanvas.Header closeButton closeVariant="white">
+          <Offcanvas.Header closeButton closeVariant='white'>
             <Offcanvas.Title
               id='offcanvasNavbarLabel'
               style={{ color: 'white' }}
