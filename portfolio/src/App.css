@@ -1,5 +1,5 @@
 .App {
-    height: 100vh;
-    width: 100vw;
-    margin:auto;
+  background-image: url('./images/markus-spiske-GXBF7vaC6L8-unsplash.jpeg');
+  width: 100vw;
+  background-size: cover;
 }

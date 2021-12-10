@@ -1,57 +1,31 @@
 import React from 'react';
-import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
-import CanvasBackground from '../../images/markus-spiske-GXBF7vaC6L8-unsplash.jpeg';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+
 import './NavigationBar.css';
 
 export const NavigationBar = () => {
   return (
-    <Navbar bg='transparent' expand={false}>
-      <Container fluid>
-        <Navbar.Brand href='#' style={{ color: 'white' }}>
-          Hector Agudelo-Carmona
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls='offcanvasNavbar'
-          style={{
-            backgroundColor: 'white',
-            borderColor: 'green',
-            color: 'green',
-          }}
-        />
-        <Navbar.Offcanvas
-          id='offcanvasNavbar'
-          aria-labelledby='offcanvasNavbarLabel'
-          placement='end'
-          style={{
-            backgroundImage: `linear-gradient(to left, transparent,1%, black),url(${CanvasBackground})`,
-            backgroundSize: 'cover',
-          }}
-        >
-          <Offcanvas.Header closeButton closeVariant='white'>
-            <Offcanvas.Title
-              id='offcanvasNavbarLabel'
-              style={{ color: 'white' }}
-            >
-              Hector Agudelo-Carmona
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className='justify-content-end flex-grow-1 pe-3'>
-              <Nav.Link className='navLinks' href='#action1'>
-                Home
-              </Nav.Link>
-              <Nav.Link className='navLinks' href='#action2'>
-                About
-              </Nav.Link>
-              <Nav.Link className='navLinks' href='#action2'>
-                Portfolio
-              </Nav.Link>
-              <Nav.Link className='navLinks' href='#action2'>
-                Contact
-              </Nav.Link>
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
+    <Navbar
+      collapseOnSelect
+      expand='lg'
+      bg='transparent'
+      variant='dark'
+      sticky='top'
+    >
+      <Container>
+        <Navbar.Brand href='#home'>Hector Agudelo</Navbar.Brand>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav
+            className='justify-content-end'
+            style={{ width: '100%', alignItems: 'center' }}
+          >
+            <Nav.Link href='#Home'>Home</Nav.Link>
+            <Nav.Link href='#About'>About</Nav.Link>
+            <Nav.Link href='#Work'>Work</Nav.Link>
+            <Nav.Link href='#Contact'>Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

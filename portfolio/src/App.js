@@ -1,19 +1,16 @@
 import { NavigationBar } from './components/NavigationBar/NavigationBar';
-import { Footer } from './components/Footer/Footer';
+import { About } from './components/About/About';
 import './App.css';
-import ImgBackground from './images/markus-spiske-GXBF7vaC6L8-unsplash.jpeg';
+
+import './App.css';
 
 function App() {
   return (
-    <div
-      className='App'
-      style={{
-        background: `linear-gradient(to right, transparent,1%, black), url(${ImgBackground})`,
-        backgroundSize: 'contain',
-      }}
-    >
+    <div className='App'>
       <NavigationBar />
-      <Footer />
+      <About />
+      <About />
+
     </div>
   );
 }
