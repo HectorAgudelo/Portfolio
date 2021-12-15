@@ -8,9 +8,10 @@ export const NavigationBar = () => {
     <Navbar
       collapseOnSelect
       expand='lg'
-      bg='transparent'
+      bg='dark '
       variant='dark'
       sticky='top'
+      style={{opacity:'0.9', boxShadow: '5px 5px 100px 0px black'}}
     >
       <Container>
         <Navbar.Brand href='#home'>Hector Agudelo</Navbar.Brand>
