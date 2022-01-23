@@ -1,0 +1,33 @@
+.backgroundColor{
+ 
+   background: #ffffff!important ;
+
+   transition: all 3s ease 0s;
+}
+
+.backgroundColor.active{
+box-shadow: 20px 0px 50px 0px #393e41;
+    background: #d3d0cb !important ;
+    transition: all 2s ease 0s;
+}
+
+.navText{
+    color: #393e41 !important;
+   
+}
+
+.navText:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #739186 !important;
+}
+.navbar-toggler:focus{
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .navbar-toggler {
+    /* font-size: 1rem !important; */
+    border: none !important;
+    /* border-radius: 1.25rem !important; */
+
+  }
