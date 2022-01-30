@@ -1,34 +1,79 @@
 import React from 'react';
-import { Container, Image, Row, Col } from 'react-bootstrap';
-import myself from '../../images/selfImage.jpeg';
+import myself from '../../images/Self.jpg';
+import styles from 'styled-components';
 import './About.css';
+
+const Image = styles.img`
+margin: 0px;
+height: 400px;
+width: auto;
+`;
+
+const Section = styles.section`
+display: flex;
+flex-direction: ${(props) => props.flexDirection};
+align-items: ${props=>props.alignItems};
+justify-content: center;
+margin: ${(props) => props.margin};
+gap: 0px;
+`;
+
+const Title = styles.h1`
+font-size: ${props=>props.fontSize};
+margin: 0px 0px 10px 0px;
+color: #393E41 !important;
+text-align: ${props=>props.titleAlign};
+text-shadow: ${props=>props.textShadow};
+`;
+
+const Text = styles.p`
+text-align: ${props=>props.textAlign};
+margin: ${(props) => props.margin};
+gap: 0px;
+color: #393E41 !important;
+`;
+
+const Container = styles.div`
+margin: 0px 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+gap: 10px;
+height: 100vh;
+width: auto;
+`;
 
 export const About = () => {
   return (
-    <Container
-      style={{ margin: '15% 0% auto 0%', padding: '50px' }}
-      fluid
-    >
-      <Row className='justify-content-center align-items-center'>
-        <Col sm='auto' md='6' lg='auto'>
-          <Container fluid>
-            <Image  src={myself} roundedCircle width='100%' height='100%'/>
-          </Container>
-        </Col>
-        <Col sm='12' md='6' lg='5'>
-          <p style={{ color: 'white', textAlign: 'justify', hyphens: 'auto' }}>
-            I am a very passionate, diligent and easygoing person that enjoys
-            team work and collaborative environments. I enjoy reading about
-            advancements in technology and space exploration. I consider myself
-            a Junior Front-End Web Developer eager to learn more and apply my
-            skills in a corporate setting. I have experience in building
-            web-applications in Vanilla JavaScript, Jquery, and Ajax. I also
-            have some knowledge of node.js and APIs integration. During my free
-            time I enjoy the outdoors. Connecting with nature has helped me
-            balance hours of computer training.
-          </p>
-        </Col>
-      </Row>
+    <Container>
+      <Section flexDirection='column'  alignItems='center'>
+        <Title titleAlign='center' textShadow='2px 5px 0 rgba(0,0,0,0.2)'>About</Title>
+        <Text margin='0px 0px 20px 0px' textAlign='center' fontSize='40px'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </Text>
+      </Section>
+      <Section flexDirection='row' alignItems='flex-start' margin='0px' >
+        <Image src={myself} />
+        <Section flexDirection='column' margin='0px 40px' alignItems='flex-start'>
+          <Title titleAlign='left' fontSize='25px' textShadow='none'>Frontend Developer</Title>
+          <Text textAlign='left' margin='0px 0px '>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer
+            enim neque volutpat ac. Nibh cras pulvinar mattis nunc sed blandit
+            libero. Nunc scelerisque viverra mauris in aliquam sem fringilla ut.
+            Faucibus ornare suspendisse sed nisi lacus sed viverra. Porta nibh
+            venenatis cras sed felis eget velit aliquet sagittis. Urna molestie
+            at elementum eu. Tempus quam pellentesque nec nam aliquam sem et
+            tortor. Consectetur a erat nam at lectus urna duis. Nunc sed velit
+            dignissim sodales. Cras pulvinar mattis nunc sed blandit libero.
+            Ipsum consequat nisl vel pretium lectus quam. Pretium quam vulputate
+            dignissim suspendisse in est. Donec ac odio tempor orci dapibus
+            ultrices in.
+          </Text>
+        </Section>
+      </Section>
     </Container>
   );
 };
