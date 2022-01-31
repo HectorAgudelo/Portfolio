@@ -20,7 +20,7 @@ gap: 0px;
 
 const Title = styles.h1`
 font-size: ${props=>props.fontSize};
-margin: 0px 0px 10px 0px;
+margin: ${props=>props.margin} ;
 color: #393E41 !important;
 text-align: ${props=>props.titleAlign};
 text-shadow: ${props=>props.textShadow};
@@ -48,7 +48,7 @@ export const About = () => {
   return (
     <Container>
       <Section flexDirection='column'  alignItems='center'>
-        <Title titleAlign='center' textShadow='2px 5px 0 rgba(0,0,0,0.2)'>About</Title>
+        <Title titleAlign='center' textShadow='2px 5px 0 rgba(0,0,0,0.2)' margin='0px 0px 40px 0px'>About</Title>
         <Text margin='0px 0px 20px 0px' textAlign='center' fontSize='40px'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -57,7 +57,7 @@ export const About = () => {
       <Section flexDirection='row' alignItems='flex-start' margin='0px' >
         <Image src={myself} />
         <Section flexDirection='column' margin='0px 40px' alignItems='flex-start'>
-          <Title titleAlign='left' fontSize='25px' textShadow='none'>Frontend Developer</Title>
+          <Title titleAlign='left' fontSize='25px' textShadow='none' margin='0px 0px 10px 0px'>Frontend Developer</Title>
           <Text textAlign='left' margin='0px 0px '>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer
