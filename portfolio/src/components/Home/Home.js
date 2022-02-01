@@ -4,6 +4,7 @@ import Img from '../../images/emile-perron-xrVDYZRGdw4-unsplash.jpeg';
 import Typewriter from 'typewriter-effect';
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import './Home.css';
+import { device } from '../DeviceScreens/DeviceScreens';
 
 const Section = styles.section`
 
@@ -16,11 +17,19 @@ background-size: cover;
 height: 100vh;
 width: auto;
 
+@media ${device.desktopL}{
+
+}
 `;
 
 const Title = styles.h1`
 margin: 2px 40px;
 color: #393E41;
+
+@media ${device.desktopL}{
+font-size: 80px;
+margin: 4px 400px;
+}
 
 `;
 
@@ -29,6 +38,12 @@ display: inline-flex;
 margin: 2px 40px;
 gap: 8px;
 color: #393E41 !important;
+
+@media ${device.desktopL}{
+  font-size: 40px;
+  margin: 4px 400px;
+  }
+
 `;
 
 const Container = styles.div`
@@ -38,6 +53,11 @@ flex-direction: row;
 align-items: start;
 justify-content:center;
 gap: 30px;
+
+@media ${device.desktopL}{
+  font-size: 2em;
+  margin: 40px 400px;
+  }
 `;
 
 export const Home = () => {
