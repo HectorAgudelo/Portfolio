@@ -15,22 +15,29 @@ import {
 } from 'react-icons/si';
 
 const Container = styles.div`
-margin: ${(props) => props.margin};
+
 display: flex;
 flex-direction: ${(props) => props.flexDirection};
 align-items: ${(props) => props.alignItems};
 justify-content:center;
-gap: ${(props) => props.gap};
 
 
+@media ${device.laptopL}{
+
+  display: flex;
+  gap: ${(props) => props.gapLaptopL};
+  font-Size: ${(props) => props.fontSizeLaptopL};
+  height:20vh;
+};
 
 @media ${device.desktopL}{
-  margin: ${(props) => props.marginDesktopL};
+
   display: flex;
   gap: ${(props) => props.gapDesktopL};
   font-Size: ${(props) => props.fontSizeDesktopL};
   height:20vh;
-}
+};
+
 `;
 
 const Text = styles.p`
@@ -39,9 +46,14 @@ margin: ${(props) => props.margin};
 gap: 0px;
 color: #393E41 !important;
 
+@media ${device.laptopL}{
+  font-Size: ${(props) => props.fontSizeLaptopL};
+};
+
 @media ${device.desktopL}{
   font-Size: ${(props) => props.fontSizeDesktopL};
-}
+};
+
 `;
 
 const Section = styles.section`
@@ -49,16 +61,25 @@ display: flex;
 flex-direction: ${(props) => props.flexDirection};
 align-items: ${(props) => props.alignItems};
 justify-content: center;
-margin: ${(props) => props.margin};
-gap: ${(props) => props.gap};
+
+
 height:60vh;
+
+@media ${device.laptopL}{
+  margin: ${(props) => props.marginLaptopL};
+ 
+  gap: ${(props) => props.gapLaptopL};
+  height:30vh;
+};
 
 @media ${device.desktopL}{
   margin: ${(props) => props.marginDesktopL};
-  font-Size: ${(props) => props.fontSizeDesktopL};
+  
   gap: ${(props) => props.gapDesktopL};
   height:30vh;
-}
+};
+
+
 `;
 
 const Title = styles.h1`
@@ -68,20 +89,37 @@ color: #393E41 !important;
 text-align: ${(props) => props.titleAlign};
 text-shadow: ${(props) => props.textShadow};
 
+@media ${device.laptopL}{
+  font-Size: ${(props) => props.fontSizeLaptopL};
+  margin: ${(props) => props.marginLaptopL} ;
+};
+
 @media ${device.desktopL}{
   font-Size: ${(props) => props.fontSizeDesktopL};
-}
+  margin: ${(props) => props.marginDesktopL} ;
+};
+
+
 `;
 
 export const Skills = () => {
   return (
-    <Section flexDirection='column' alignItems='center' marginDesktopL='0px 400px' gapDesktopL='10px'>
+    <Section
+      flexDirection='column'
+      alignItems='center'
+      marginDesktopL='0px 400px'
+      marginLaptopL='0px 200px'
+      gapDesktopL='10px'
+      gapLaptopL='0px'
+    >
       <Section flexDirection='column' alignItems='center' gap='0px'>
         <Title
           titleAlign='center'
           textShadow='2px 5px 0 rgba(0,0,0,0.2)'
-          margin='60px 0px 40px 0px'
+          marginDesktopL='60px 0px 40px 0px'
+          marginLaptopL='60px 0px 20px 0px'
           fontSizeDesktopL='80px'
+          fontSizeLaptopL='45px'
         >
           Skills
         </Title>
@@ -89,23 +127,37 @@ export const Skills = () => {
           margin='0px 0px 20px 0px'
           textAlign='center'
           fontSizeDesktopL='35px'
+          fontSizeLaptopL='20px'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
         </Text>
         <Text
           margin='0px 0px 20px 0px'
           textAlign='center'
           fontSizeDesktopL='35px'
+          fontSizeLaptopL='20px'
         >
           <a href='https://docs.google.com/document/d/1-WiqkWGrUnhsf7YyjKerPKAkakKRrd5j/edit?usp=sharing&ouid=109866500808769579371&rtpof=true&sd=true'>
             View My Resume
           </a>
         </Text>
       </Section>
-      <Container flexDirection='row' gap='30px' alignItems='center' gapDesktopL='60px'>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+      <Container
+        flexDirection='row'
+        alignItems='center'
+        gapDesktopL='60px'
+        gapLaptopL='30px'
+      >
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiHtml5 className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -115,7 +167,13 @@ export const Skills = () => {
             HTML
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiCss3 className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -125,7 +183,13 @@ export const Skills = () => {
             CSS
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiJavascript className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -135,7 +199,13 @@ export const Skills = () => {
             JavaScript
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiReact className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -145,7 +215,13 @@ export const Skills = () => {
             React
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiBootstrap className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -155,7 +231,13 @@ export const Skills = () => {
             Bootstrap
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiStyledcomponents className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -165,7 +247,13 @@ export const Skills = () => {
             Style Components
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiNodedotjs className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -175,7 +263,13 @@ export const Skills = () => {
             NodeJS
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiMongodb className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -185,7 +279,13 @@ export const Skills = () => {
             MongoDB
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiNextdotjs className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
@@ -195,14 +295,19 @@ export const Skills = () => {
             NextJS
           </Text>
         </Container>
-        <Container flexDirection='column' alignItems='center' gap='0px' fontSizeDesktopL='2em'>
+        <Container
+          flexDirection='column'
+          alignItems='center'
+          gap='0px'
+          fontSizeDesktopL='2em'
+          fontSizeLaptopL='1em'
+        >
           <SiStorybook className='icon' size={'3em'} />
           <Text
             margin='0px 0px 20px 0px'
             textAlign='center'
             fontSizeDesktopL='25px'
           >
-       
             Storybook
           </Text>
         </Container>

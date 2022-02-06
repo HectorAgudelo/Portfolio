@@ -19,6 +19,10 @@ width: auto;
 
 @media ${device.desktopL}{
 
+};
+
+@media ${device.laptopL}{
+
 }
 `;
 
@@ -26,10 +30,16 @@ const Title = styles.h1`
 margin: 2px 40px;
 color: #393E41;
 
+@media ${device.laptopL}{
+  font-size: 40px;
+  margin: 4px 200px;
+};
+
 @media ${device.desktopL}{
 font-size: 80px;
 margin: 4px 400px;
 }
+
 
 `;
 
@@ -38,11 +48,16 @@ display: inline-flex;
 margin: 2px 40px;
 gap: 8px;
 color: #393E41 !important;
+  
+@media ${device.laptopL}{
+    font-size: 20px;
+    margin: 4px 200px;
+  }
 
-@media ${device.desktopL}{
+  @media ${device.desktopL}{
   font-size: 40px;
   margin: 4px 400px;
-  }
+  };
 
 `;
 
@@ -54,10 +69,17 @@ align-items: start;
 justify-content:center;
 gap: 30px;
 
+@media ${device.laptopL}{
+  font-size: 1em;
+  margin: 20px 200px;
+}
+
 @media ${device.desktopL}{
   font-size: 2em;
   margin: 40px 400px;
-  }
+  };
+
+
 `;
 
 export const Home = () => {
