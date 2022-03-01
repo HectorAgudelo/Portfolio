@@ -6,8 +6,26 @@ import { device } from '../DeviceScreens/DeviceScreens';
 
 const Image = styles.img`
 margin: 0px;
-height: 400px;
+height: 350px;
 width: auto;
+
+@media ${device.mobileL}{
+  margin: 0px;
+  height: 500px;
+  width: auto;
+};
+
+@media ${device.tablet}{
+  margin: 0px;
+  height: 350px;
+  width: auto;
+};
+
+@media ${device.laptop}{
+  margin: 0px;
+  height: 400px;
+  width: auto;
+};
 
 @media ${device.laptopL}{
   margin: 0px;
@@ -32,12 +50,31 @@ justify-content: center;
 margin: ${(props) => props.margin};
 gap: 10px;
 
+@media ${device.mobileL}{
+  margin: ${(props) => props.marginMobileL};
+  flex-direction: ${(props) => props.flexDirectionMobileL};
+  align-items: ${(props) => props.alignItemsMobileL};
+};
+
+@media ${device.tablet}{
+  margin: ${(props) => props.marginTablet};
+  flex-direction: ${(props) => props.flexDirection};
+  align-items: ${(props) => props.alignItems};
+};
+
+@media ${device.laptop}{
+  margin: ${(props) => props.marginLaptop};
+  
+};
+
 @media ${device.laptopL}{
   margin: ${(props) => props.marginLaptopL};
+ 
 };
 
 @media ${device.desktopL}{
   margin: ${(props) => props.marginDesktopL};
+ 
 };
 
 
@@ -48,6 +85,21 @@ font-size: ${(props) => props.fontSize};
 color: #393E41 !important;
 text-align: ${(props) => props.titleAlign};
 text-shadow: ${(props) => props.textShadow};
+
+@media ${device.mobileL}{
+  font-Size: ${(props) => props.fontSizeMobileL};
+  margin: ${(props) => props.marginMobileL} ;
+};
+
+@media ${device.tablet}{
+  font-Size: ${(props) => props.fontSizeTablet};
+  margin: ${(props) => props.marginTablet} ;
+};
+
+@media ${device.laptop}{
+  font-Size: ${(props) => props.fontSizeLaptop};
+  margin: ${(props) => props.marginLaptop} ;
+};
 
 @media ${device.laptopL}{
   font-Size: ${(props) => props.fontSizeLaptopL};
@@ -67,6 +119,19 @@ text-align: ${(props) => props.textAlign};
 margin: ${(props) => props.margin};
 gap: 0px;
 color: #393E41 !important;
+
+@media ${device.mobileL}{
+  font-Size: ${(props) => props.fontSizeMobileL}
+  padding: ${(props) => props.paddingMobileL}
+};
+
+@media ${device.tablet}{
+  font-Size: ${(props) => props.fontSizeTablet}
+};
+
+@media ${device.laptop}{
+  font-Size: ${(props) => props.fontSizeLaptop}
+};
 
 @media ${device.laptopL}{
   font-Size: ${(props) => props.fontSizeLaptopL}
@@ -89,6 +154,25 @@ gap: 10px;
 height: 100vh;
 width: auto;
 
+@media ${device.mobileL}{
+  gap: 5px;
+  margin: 0px 0px;
+  height: 130vh;
+  width: 125vmin;
+};
+
+@media ${device.tablet}{
+  gap: 5px;
+  margin: 0px 20px;
+  height: 100vh;
+  width: auto;
+};
+
+@media ${device.laptop}{
+  gap: 10px;
+  margin: 0px 30px;
+};
+
 @media ${device.laptopL}{
   gap: 10px;
 };
@@ -109,8 +193,14 @@ export const About = () => {
           textShadow='2px 5px 0 rgba(0,0,0,0.2)'
           marginDesktopL='0px 0px 40px 0px'
           marginLaptopL='0px 0px 20px 0px'
+          marginLaptop='0px 0px 10px 0px'
+          marginTablet='0px 0px 5px 0px'
+          marginMobileL='0px 0px 5px 0px'
           fontSizeDesktopL='80px'
           fontSizeLaptopL='45px'
+          fontSizeLaptop='40px'
+          fontSizeTablet='40px'
+          fontSizeMobileL='40px'
         >
           About
         </Title>
@@ -119,6 +209,10 @@ export const About = () => {
           textAlign='center'
           fontSizeDesktopL='35px'
           fontSizeLaptopL='20px'
+          fontSizeLaptop='15px'
+          fontSizeTablet='15px'
+          fontSizeMobileL='15px'
+          paddingMobileL='10px'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -126,16 +220,24 @@ export const About = () => {
       </Section>
       <Section
         flexDirection='row'
+        flexDirectionMobileL='column'
         alignItems='flex-start'
+        alignItemsMobileL='center'
         margin='0px'
         marginDesktopL='0px 400px'
         marginLaptopL='0px 200px'
+        marginLaptop='0px 100px'
+        marginTablet='0px 50px'
+        marginMobileL='0px 50px'
       >
         <Image src={myself} />
         <Section
           flexDirection='column'
           marginDesktopL='0px 40px'
           marginLaptopL='0px 20px'
+          marginLaptop='0px 10px'
+          marginTablet='0px 5px'
+          marginMobileL='0px 5px'
           alignItems='flex-start'
         >
           <Title
@@ -143,6 +245,9 @@ export const About = () => {
             fontSize='25px'
             fontSizeDesktopL='50px'
             fontSizeLaptopL='30px'
+            fontSizeLaptop='20px'
+            fontSizeTablet='20px'
+            fontSizeMobileL='20px'
             textShadow='none'
             margin='0px 0px 10px 0px'
           >
@@ -153,6 +258,9 @@ export const About = () => {
             margin='0px 0px'
             fontSizeDesktopL='35px'
             fontSizeLaptopL='20px'
+            fontSizeLaptop='15px'
+            fontSizeTablet='15px'
+            fontSizeMobileL='15px'
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer
