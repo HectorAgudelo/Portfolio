@@ -9,6 +9,12 @@ margin: 0px;
 height: 350px;
 width: auto;
 
+@media ${device.mobileM}{
+  margin: 0px;
+  height: 400px;
+  width: auto;
+};
+
 @media ${device.mobileL}{
   margin: 0px;
   height: 500px;
@@ -50,6 +56,12 @@ justify-content: center;
 margin: ${(props) => props.margin};
 gap: 10px;
 
+@media ${device.mobileM}{
+  margin: ${(props) => props.marginMobileM};
+  flex-direction: ${(props) => props.flexDirectionMobileM};
+  align-items: ${(props) => props.alignItemsMobileM};
+};
+
 @media ${device.mobileL}{
   margin: ${(props) => props.marginMobileL};
   flex-direction: ${(props) => props.flexDirectionMobileL};
@@ -86,6 +98,11 @@ color: #393E41 !important;
 text-align: ${(props) => props.titleAlign};
 text-shadow: ${(props) => props.textShadow};
 
+@media ${device.mobileM}{
+  font-Size: ${(props) => props.fontSizeMobileM};
+  margin: ${(props) => props.marginMobileM} ;
+};
+
 @media ${device.mobileL}{
   font-Size: ${(props) => props.fontSizeMobileL};
   margin: ${(props) => props.marginMobileL} ;
@@ -120,6 +137,11 @@ margin: ${(props) => props.margin};
 gap: 0px;
 color: #393E41 !important;
 
+@media ${device.mobileM}{
+  font-Size: ${(props) => props.fontSizeMobileM}
+  padding: ${(props) => props.paddingMobileM}
+};
+
 @media ${device.mobileL}{
   font-Size: ${(props) => props.fontSizeMobileL}
   padding: ${(props) => props.paddingMobileL}
@@ -153,6 +175,15 @@ justify-content:center;
 gap: 10px;
 height: 100vh;
 width: auto;
+
+
+@media ${device.mobileM}{
+  gap: 5px;
+  margin: 0px 0px;
+  height: 130vh;
+  width: 125vmin;
+};
+
 
 @media ${device.mobileL}{
   gap: 5px;
@@ -196,11 +227,13 @@ export const About = () => {
           marginLaptop='0px 0px 10px 0px'
           marginTablet='0px 0px 5px 0px'
           marginMobileL='0px 0px 5px 0px'
+          marginMobileM='0px 0px 5px 0px'
           fontSizeDesktopL='80px'
           fontSizeLaptopL='45px'
           fontSizeLaptop='40px'
-          fontSizeTablet='40px'
-          fontSizeMobileL='40px'
+          fontSizeTablet='35px'
+          fontSizeMobileL='35px'
+          fontSizeMobileM='30px'
         >
           About
         </Title>
@@ -213,6 +246,7 @@ export const About = () => {
           fontSizeTablet='15px'
           fontSizeMobileL='15px'
           paddingMobileL='10px'
+          paddingMobileM='10px'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -221,14 +255,17 @@ export const About = () => {
       <Section
         flexDirection='row'
         flexDirectionMobileL='column'
+        flexDirectionMobileM='column'
         alignItems='flex-start'
         alignItemsMobileL='center'
+        alignItemsMobileM='center'
         margin='0px'
         marginDesktopL='0px 400px'
         marginLaptopL='0px 200px'
         marginLaptop='0px 100px'
         marginTablet='0px 50px'
         marginMobileL='0px 50px'
+        marginMobileM='0px 50px'
       >
         <Image src={myself} />
         <Section
@@ -238,6 +275,7 @@ export const About = () => {
           marginLaptop='0px 10px'
           marginTablet='0px 5px'
           marginMobileL='0px 5px'
+          marginMobileM='0px 5px'
           alignItems='flex-start'
         >
           <Title
@@ -248,6 +286,7 @@ export const About = () => {
             fontSizeLaptop='20px'
             fontSizeTablet='20px'
             fontSizeMobileL='20px'
+            fontSizeMobileM='20px'
             textShadow='none'
             margin='0px 0px 10px 0px'
           >
@@ -261,6 +300,7 @@ export const About = () => {
             fontSizeLaptop='15px'
             fontSizeTablet='15px'
             fontSizeMobileL='15px'
+            fontSizeMobileM='15px'
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer

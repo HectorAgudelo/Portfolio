@@ -21,6 +21,14 @@ flex-direction: ${(props) => props.flexDirection};
 align-items: ${(props) => props.alignItems};
 justify-content:center;
 
+@media ${device.mobileM}{
+  display: flex;
+  gap: ${(props) => props.gapMobileM};
+  font-Size: ${(props) => props.fontSizeMobileM};
+  height: 10vh;
+  
+};
+
 @media ${device.mobileL}{
   display: flex;
   gap: ${(props) => props.gapMobileL};
@@ -66,6 +74,10 @@ margin: ${(props) => props.margin};
 gap: 0px;
 color: #393E41 !important;
 
+@media ${device.mobileM}{
+  font-Size: ${(props) => props.fontSizeMobileM};
+};
+
 @media ${device.mobileL}{
   font-Size: ${(props) => props.fontSizeMobileL};
 };
@@ -95,6 +107,15 @@ align-items: ${(props) => props.alignItems};
 justify-content: center;
 height:60vh;
 
+@media ${device.mobileM}{
+  margin: ${(props) => props.marginMobileM};
+  padding: 10px;
+ 
+  gap: ${(props) => props.gapMobileM};
+  height:30vh;
+  width: 125vmin;
+};
+
 @media ${device.mobileL}{
   margin: ${(props) => props.marginMobileL};
   padding: 10px;
@@ -110,7 +131,6 @@ height:60vh;
   gap: ${(props) => props.gapTablet};
   height:30vh;
   width: auto;
-
 };
 
 @media ${device.laptop}{
@@ -143,6 +163,12 @@ margin: ${(props) => props.margin} ;
 color: #393E41 !important;
 text-align: ${(props) => props.titleAlign};
 text-shadow: ${(props) => props.textShadow};
+
+
+@media ${device.mobileM}{
+  font-Size: ${(props) => props.fontSizeMobileM};
+  margin: ${(props) => props.marginMobileM} ;
+};
 
 @media ${device.mobileL}{
   font-Size: ${(props) => props.fontSizeMobileL};
@@ -182,11 +208,13 @@ export const Skills = () => {
       marginLaptop='0px 100px'
       marginTablet='0px 50px'
       marginMobileL='0px 0px'
+      marginMobileM='0px 0px'
       gapDesktopL='10px'
       gapLaptopL='0px'
       gapLaptop='0px'
       gapTablet='0px'
       gapMobileL='0px'
+      gapMobileM='0px'
     >
       <Section flexDirection='column' alignItems='center' gap='0px'>
         <Title
@@ -197,11 +225,13 @@ export const Skills = () => {
           marginLaptop='60px 0px 10px 0px'
           marginTablet='0px 0px 5px 0px'
           marginMobileL='0px 0px 5px 0px'
+          marginMobileM='0px 0px 5px 0px'
           fontSizeDesktopL='80px'
           fontSizeLaptopL='45px'
           fontSizeLaptop='40px'
           fontSizeTablet='35px'
           fontSizeMobileL='35px'
+          fontSizeMobileM='30px'
         >
           Skills
         </Title>
@@ -213,6 +243,7 @@ export const Skills = () => {
           fontSizeLaptop='15px'
           fontSizeTablet='15px'
           fontSizeMobileL='15px'
+          fontSizeMobileM='15px'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
@@ -227,6 +258,7 @@ export const Skills = () => {
           fontSizeLaptop='15px'
           fontSizeTablet='15px'
           fontSizeMobileL='15px'
+          fontSizeMobileM='15px'
         >
           <a href='https://docs.google.com/document/d/1-WiqkWGrUnhsf7YyjKerPKAkakKRrd5j/edit?usp=sharing&ouid=109866500808769579371&rtpof=true&sd=true'>
             View My Resume
@@ -241,6 +273,7 @@ export const Skills = () => {
         gapLaptop='20px'
         gapTablet='10px'
         gapMobileL='20px'
+        gapMobileM='20px'
       >
         <Container
           flexDirection='column'
@@ -252,6 +285,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiHtml5 className='icon' size={'3em'} />
           <Text
@@ -260,6 +294,7 @@ export const Skills = () => {
             fontSizeDesktopL='25px'
             fontSizeLaptop='15px'
             fontSizeMobileL='15px'
+            fontSizeMobileM='15px'
           >
             HTML
           </Text>
@@ -273,6 +308,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiCss3 className='icon' size={'3em'} />
           <Text
@@ -281,6 +317,7 @@ export const Skills = () => {
             fontSizeDesktopL='25px'
             fontSizeLaptop='15px'
             fontSizeMobileL='15px'
+            fontSizeMobileM='15px'
           >
             CSS
           </Text>
@@ -294,6 +331,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiJavascript className='icon' size={'3em'} />
           <Text
@@ -314,6 +352,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiReact className='icon' size={'3em'} />
           <Text
@@ -334,6 +373,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
 
         >
           <SiBootstrap className='icon' size={'3em'} />
@@ -355,6 +395,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiStyledcomponents className='icon' size={'3em'} />
           <Text
@@ -375,6 +416,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiNodedotjs className='icon' size={'3em'} />
           <Text
@@ -395,6 +437,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiMongodb className='icon' size={'3em'} />
           <Text
@@ -415,6 +458,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiNextdotjs className='icon' size={'3em'} />
           <Text
@@ -435,6 +479,7 @@ export const Skills = () => {
           fontSizeLaptop='0.9em'
           fontSizeTablet='0.7em'
           fontSizeMobileL='0.7em'
+          fontSizeMobileM='0.7em'
         >
           <SiStorybook className='icon' size={'3em'} />
           <Text
