@@ -9,6 +9,12 @@ margin: 0px;
 height: 350px;
 width: auto;
 
+@media ${device.mobileS}{
+  margin: 0px;
+  height: 350px;
+  width: auto;
+};
+
 @media ${device.mobileM}{
   margin: 0px;
   height: 400px;
@@ -56,6 +62,12 @@ justify-content: center;
 margin: ${(props) => props.margin};
 gap: 10px;
 
+@media ${device.mobileS}{
+  margin: ${(props) => props.marginMobileS};
+  flex-direction: ${(props) => props.flexDirectionMobileS};
+  align-items: ${(props) => props.alignItemsMobileS};
+};
+
 @media ${device.mobileM}{
   margin: ${(props) => props.marginMobileM};
   flex-direction: ${(props) => props.flexDirectionMobileM};
@@ -98,6 +110,11 @@ color: #393E41 !important;
 text-align: ${(props) => props.titleAlign};
 text-shadow: ${(props) => props.textShadow};
 
+@media ${device.mobileS}{
+  font-Size: ${(props) => props.fontSizeMobileS};
+  margin: ${(props) => props.marginMobileS} ;
+};
+
 @media ${device.mobileM}{
   font-Size: ${(props) => props.fontSizeMobileM};
   margin: ${(props) => props.marginMobileM} ;
@@ -137,6 +154,11 @@ margin: ${(props) => props.margin};
 gap: 0px;
 color: #393E41 !important;
 
+@media ${device.mobileS}{
+  font-Size: ${(props) => props.fontSizeMobileS}
+  padding: ${(props) => props.paddingMobileS}
+};
+
 @media ${device.mobileM}{
   font-Size: ${(props) => props.fontSizeMobileM}
   padding: ${(props) => props.paddingMobileM}
@@ -147,7 +169,7 @@ color: #393E41 !important;
   padding: ${(props) => props.paddingMobileL}
 };
 
-@media ${device.tablet}{
+@media ${device.tablet}{s
   font-Size: ${(props) => props.fontSizeTablet}
 };
 
@@ -176,11 +198,18 @@ gap: 10px;
 height: 100vh;
 width: auto;
 
+@media ${device.mobileS}{
+  gap: 5px;
+  margin: 0px 0px;
+  height: 140vh;
+  width: 125vmin;
+};
+
 
 @media ${device.mobileM}{
   gap: 5px;
   margin: 0px 0px;
-  height: 130vh;
+  height: 140vh;
   width: 125vmin;
 };
 
@@ -188,7 +217,7 @@ width: auto;
 @media ${device.mobileL}{
   gap: 5px;
   margin: 0px 0px;
-  height: 130vh;
+  height: 140vh;
   width: 125vmin;
 };
 
@@ -202,14 +231,20 @@ width: auto;
 @media ${device.laptop}{
   gap: 10px;
   margin: 0px 30px;
+  height: 85vh;
+  width: auto;
 };
 
 @media ${device.laptopL}{
   gap: 10px;
+  height: 80vh;
+  width: auto;
 };
 
 @media ${device.desktopL}{
 gap: 30px;
+height: 95vh;
+width: auto;
 };
 
 
@@ -228,12 +263,14 @@ export const About = () => {
           marginTablet='0px 0px 5px 0px'
           marginMobileL='0px 0px 5px 0px'
           marginMobileM='0px 0px 5px 0px'
+          marginMobileS='0px 0px 5px 0px'
           fontSizeDesktopL='80px'
           fontSizeLaptopL='45px'
           fontSizeLaptop='40px'
           fontSizeTablet='35px'
           fontSizeMobileL='35px'
           fontSizeMobileM='30px'
+          fontSizeMobileS='25px'
         >
           About
         </Title>
@@ -247,6 +284,7 @@ export const About = () => {
           fontSizeMobileL='15px'
           paddingMobileL='10px'
           paddingMobileM='10px'
+          paddingMobileS='10px'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -256,9 +294,11 @@ export const About = () => {
         flexDirection='row'
         flexDirectionMobileL='column'
         flexDirectionMobileM='column'
+        flexDirectionMobileS='column'
         alignItems='flex-start'
         alignItemsMobileL='center'
         alignItemsMobileM='center'
+        alignItemsMobileS='center'
         margin='0px'
         marginDesktopL='0px 400px'
         marginLaptopL='0px 200px'
@@ -266,6 +306,7 @@ export const About = () => {
         marginTablet='0px 50px'
         marginMobileL='0px 50px'
         marginMobileM='0px 50px'
+        marginMobileS='0px 50px'
       >
         <Image src={myself} />
         <Section
@@ -276,6 +317,7 @@ export const About = () => {
           marginTablet='0px 5px'
           marginMobileL='0px 5px'
           marginMobileM='0px 5px'
+          marginMobileS='0px 5px'
           alignItems='flex-start'
         >
           <Title
@@ -287,6 +329,7 @@ export const About = () => {
             fontSizeTablet='20px'
             fontSizeMobileL='20px'
             fontSizeMobileM='20px'
+            fontSizeMobileS='20px'
             textShadow='none'
             margin='0px 0px 10px 0px'
           >
@@ -301,6 +344,7 @@ export const About = () => {
             fontSizeTablet='15px'
             fontSizeMobileL='15px'
             fontSizeMobileM='15px'
+            fontSizeMobileS='15px'
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer

@@ -16,6 +16,13 @@ background-size: cover;
 height: 100vh;
 width: auto;
 
+@media ${device.mobileS}{
+  background-size: cover;
+  height: 100vh;
+  width: 125vmin;
+  align-items: center;
+};
+
 @media ${device.mobileM}{
   background-size: cover;
   height: 100vh;
@@ -57,6 +64,11 @@ const Title = styles.h1`
 margin: 2px 40px;
 color: #393E41;
 
+@media ${device.mobileS}{
+  font-size: 25px;
+  margin: 4px 0px;
+};
+
 @media ${device.mobileM}{
   font-size: 30px;
   margin: 4px 0px;
@@ -96,6 +108,11 @@ display: inline-flex;
 margin: 2px 40px;
 gap: 8px;
 color: #393E41 !important;
+
+@media ${device.mobileS}{
+  font-size: 20px;
+  margin: 4px 0px;
+};
 
 @media ${device.mobileM}{
   font-size: 20px;
@@ -137,6 +154,12 @@ display: flex;
 flex-direction: row;
 align-items: start;
 justify-content:center;
+
+@media ${device.mobileS}{
+  font-size: 0.7em;
+  margin: 15px 60px;
+  gap: 15px;
+};
 
 @media ${device.mobileM}{
   font-size: 0.9em;
