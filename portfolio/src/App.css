@@ -2,4 +2,7 @@
   width: 100vw;
   height: auto;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 50px ;
 }

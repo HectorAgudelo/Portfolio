@@ -2,8 +2,10 @@ import React from 'react';
 import styles from 'styled-components';
 import { ProjectModalRender } from '../ProjectModalRender/ProjectModalRender';
 import { device } from '../DeviceScreens/DeviceScreens';
-import AntidoteRestaurant from '../../images/A.png'
-import Chat from '../../images/ChatRoom.png'
+import AntidoteRestaurant from '../../images/A.png';
+import Chat from '../../images/ChatRoom.png';
+import { Button } from 'react-bootstrap';
+import './ProjectModalContainer.css'
 
 const Container = styles.div`
 flex-wrap: wrap;
@@ -11,12 +13,13 @@ display: flex;
 flex-direction: ${(props) => props.flexDirection};
 align-items: ${(props) => props.alignItems};
 justify-content:center;
+width: inherit;
 
 @media ${device.mobileS}{
-  display: flex;
+ 
   gap: ${(props) => props.gapMobileS};
   font-Size: ${(props) => props.fontSizeMobileS};
-  height: 10vh;
+  height: auto;
   
 };
 
@@ -24,7 +27,7 @@ justify-content:center;
   display: flex;
   gap: ${(props) => props.gapMobileM};
   font-Size: ${(props) => props.fontSizeMobileM};
-  height: 10vh;
+  height: auto;
   
 };
 
@@ -32,7 +35,7 @@ justify-content:center;
   display: flex;
   gap: ${(props) => props.gapMobileL};
   font-Size: ${(props) => props.fontSizeMobileL};
-  height: 10vh;
+  height: auto;
   
 };
 
@@ -40,21 +43,21 @@ justify-content:center;
   display: flex;
   gap: ${(props) => props.gapTablet};
   font-Size: ${(props) => props.fontSizeTablet};
-  height:20vh;
+  height:auto;
 };
 
 @media ${device.laptop}{
   display: flex;
   gap: ${(props) => props.gapLaptop};
   font-Size: ${(props) => props.fontSizeLaptop};
-  height:20vh;
+  height:auto;
 };
 
 @media ${device.laptopL}{
  display: flex;
   gap: ${(props) => props.gapLaptopL};
   font-Size: ${(props) => props.fontSizeLaptopL};
-  height:20vh;
+  height:auto;
 };
 
 @media ${device.desktopL}{
@@ -62,7 +65,7 @@ justify-content:center;
   display: flex;
   gap: ${(props) => props.gapDesktopL};
   font-Size: ${(props) => props.fontSizeDesktopL};
-  height:20vh;
+  height:auto;
 };
 
 `;
@@ -114,9 +117,9 @@ justify-content: center;
   margin: ${(props) => props.marginMobileS};
   padding: 10px;
  gap: ${(props) => props.gapMobileS};
-  height:75vh;
+  height:150vh;
   width: 125vmin;
-  height: ${(props)=>props.viewHeightMobileS};
+  height: ${(props) => props.viewHeightMobileS};
 };
 
 @media ${device.mobileM}{
@@ -124,9 +127,9 @@ justify-content: center;
   padding: 10px;
  
   gap: ${(props) => props.gapMobileM};
-  height:75vh;
+  height:170vh;
   width: 125vmin;
-  height: ${(props)=>props.viewHeightMobileM};
+  height: ${(props) => props.viewHeightMobileM};
 };
 
 @media ${device.mobileL}{
@@ -134,16 +137,16 @@ justify-content: center;
   padding: 10px;
  
   gap: ${(props) => props.gapMobileL};
-  height:75vh;
+  height:170vh;
   width: 125vmin;
-  height: ${(props)=>props.viewHeightMobileL};
+  height: ${(props) => props.viewHeightMobileL};
 };
 
 @media ${device.tablet}{
   margin: ${(props) => props.marginTablet};
  
   gap: ${(props) => props.gapTablet};
-  height:40vh;
+  height:130vh;
   width: auto;
 };
 
@@ -151,7 +154,7 @@ justify-content: center;
   margin: ${(props) => props.marginLaptop};
  
   gap: ${(props) => props.gapLaptop};
-  height:55vh;
+  height:140vh;
  
 };
 
@@ -159,7 +162,7 @@ justify-content: center;
   margin: ${(props) => props.marginLaptopL};
  
   gap: ${(props) => props.gapLaptopL};
-  height:55vh;
+  height:90vh;
 };
 
 @media ${device.desktopL}{
@@ -167,7 +170,7 @@ justify-content: center;
   
   gap: ${(props) => props.gapDesktopL};
   height:65vh;
-  height: ${(props)=>props.viewHeightDesktopL};
+  height: ${(props) => props.viewHeightDesktopL};
 };
 
 
@@ -224,7 +227,7 @@ export const ProjectModalContainer = () => {
     <Section
       flexDirection='column'
       alignItems='center'
-      marginDesktopL='0px 400px'
+      marginDesktopL='0px 200px'
       marginLaptopL='0px 200px'
       marginLaptop='0px 100px'
       marginTablet='0px 50px'
@@ -239,13 +242,21 @@ export const ProjectModalContainer = () => {
       gapMobileM='0px'
       gapMobileS='0px'
     >
-      <Section flexDirection='column' alignItems='center' gap='0px' viewHeightMobileS='30vh' viewHeightMobileM='30vh' viewHeightMobileL='30vh' viewHeightDesktopL='25vh' >
+      <Section
+        flexDirection='column'
+        alignItems='center'
+        gap='0px'
+        viewHeightMobileS='30vh'
+        viewHeightMobileM='30vh'
+        viewHeightMobileL='30vh'
+        viewHeightDesktopL='25vh'
+      >
         <Title
           titleAlign='center'
           textShadow='2px 5px 0 rgba(0,0,0,0.2)'
-          marginDesktopL='60px 0px 40px 0px'
-          marginLaptopL='60px 0px 20px 0px'
-          marginLaptop='60px 0px 10px 0px'
+          marginDesktopL='0px 0px 40px 0px'
+          marginLaptopL='0px 0px 20px 0px'
+          marginLaptop=' 0px 0px 10px 0px'
           marginTablet='0px 0px 5px 0px'
           marginMobileL='0px 0px 5px 0px'
           marginMobileM='0px 0px 5px 0px'
@@ -276,8 +287,8 @@ export const ProjectModalContainer = () => {
           ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
         </Text>
-        </Section>
-        <Container
+      </Section>
+      <Container
         flexDirection='row'
         alignItems='center'
         gapDesktopL='60px'
@@ -288,11 +299,18 @@ export const ProjectModalContainer = () => {
         gapMobileM='20px'
         gapMobileS='15px'
       >
-      <ProjectModalRender Img = {AntidoteRestaurant} tittle={'Restaurant Website'} />
-      <ProjectModalRender Img= {Chat} tittle={'Chat App'}/>
-      <ProjectModalRender />
-      <ProjectModalRender />
-    </Container>
+        <ProjectModalRender
+          img={AntidoteRestaurant}
+          tittle={'Restaurant Website'}
+          codeButton={<Button variant="light" className='w-25 customColor'  href='https://github.com/HectorAgudelo/AntidoteRestaurant.git' target="_blank" rel="noreferrer noopener">Code</Button>}
+          appButton={<Button variant="light" className='mx-2 w-25 customColor'  href='https://antidoteny.com/' target="_blank" rel="noreferrer noopener" >App</Button>}
+        />
+        <ProjectModalRender
+          img={Chat}
+          tittle={'Chat App'}
+          codeButton={<Button variant="light" className='w-25 customColor'  href='https://github.com/HectorAgudelo/ChatRoom.git' target="_blank" rel="noreferrer noopener"  >Code</Button>}
+        />
+      </Container>
     </Section>
   );
 };

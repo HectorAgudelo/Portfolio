@@ -292,7 +292,7 @@ export const Skills = () => {
           fontSizeMobileM='15px'
           fontSizeMobileS='15px'
         >
-          <a href='https://docs.google.com/document/d/1-WiqkWGrUnhsf7YyjKerPKAkakKRrd5j/edit?usp=sharing&ouid=109866500808769579371&rtpof=true&sd=true'>
+          <a href='https://docs.google.com/document/d/1-WiqkWGrUnhsf7YyjKerPKAkakKRrd5j/edit?usp=sharing&ouid=109866500808769579371&rtpof=true&sd=true' target="_blank" rel="noreferrer noopener">
             View My Resume
           </a>
         </Text>
@@ -322,15 +322,12 @@ export const Skills = () => {
         >
           <SiHtml5 className='icon' size={'3em'} />
           <Text
-            margin='0px 0px 20px 0px'
-            textAlign='center'
-            fontSizeDesktopL='25px'
-            fontSizeLaptop='15px'
-            fontSizeMobileL='15px'
-            fontSizeMobileM='15px'
-            fontSizeMobileS='15px'
+                 margin='0px 0px 20px 0px'
+                 textAlign='center'
+                 fontSizeDesktopL='25px'
+                 fontSizeLaptop='15px'
           >
-            HTML
+           HTML
           </Text>
         </Container>
         <Container
@@ -347,15 +344,12 @@ export const Skills = () => {
         >
           <SiCss3 className='icon' size={'3em'} />
           <Text
-            margin='0px 0px 20px 0px'
-            textAlign='center'
-            fontSizeDesktopL='25px'
-            fontSizeLaptop='15px'
-            fontSizeMobileL='15px'
-            fontSizeMobileM='15px'
-            fontSizeMobileS='15px'
+                  margin='0px 0px 20px 0px'
+                  textAlign='center'
+                  fontSizeDesktopL='25px'
+                  fontSizeLaptop='15px'
           >
-            CSS
+           CSS
           </Text>
         </Container>
         <Container

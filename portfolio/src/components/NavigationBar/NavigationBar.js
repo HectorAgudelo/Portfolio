@@ -39,7 +39,7 @@ export const NavigationBar = () => {
               About
             </Nav.Link>
             <Nav.Link className='navText' href='#Work'>
-              Work
+              Projects
             </Nav.Link>
             <Nav.Link className='navText' href='#Contact'>
               Contact

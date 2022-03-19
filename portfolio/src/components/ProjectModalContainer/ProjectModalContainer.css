@@ -1,0 +1,20 @@
+.customColor{
+    color: #d3d0d3;
+    background: #8a5c78 !important;;
+    border-color:none;
+    }
+
+.customColor:hover{
+    background: #8b4671 !important;
+    
+}
+
+.customColor:active{
+    background: #8b4671 !important;
+    
+}
+
+.customColor:focus{
+    background: #8b4671 !important;
+    
+}
