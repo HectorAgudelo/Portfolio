@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import './NavigationBar.css';
 
-export const NavigationBar = () => {
+export const NavigationBar = (props) => {
   const [backgroundColor, setBackgroundColor] = useState(false);
 
   const changeBackground = () => {
@@ -23,7 +23,7 @@ export const NavigationBar = () => {
       className={backgroundColor ? 'backgroundColor active' : 'backgroundColor'}
     >
       <Container>
-        <Navbar.Brand className='navText' href='#home'>
+        <Navbar.Brand className='navText' href='#home' onClick={props.home}>
           Hector Agudelo
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
@@ -32,16 +32,16 @@ export const NavigationBar = () => {
             className='justify-content-end'
             style={{ width: '100%', alignItems: 'center' }}
           >
-            <Nav.Link className='navText' href='#Home'>
+            <Nav.Link className='navText' href='#Home' onClick={props.home}>
               Home
             </Nav.Link>
-            <Nav.Link className='navText' href='#About'>
+            <Nav.Link className='navText' href='#About' onClick={props.about}>
               About
             </Nav.Link>
-            <Nav.Link className='navText' href='#Work'>
+            <Nav.Link className='navText' href='#Projects' onClick={props.projects}>
               Projects
             </Nav.Link>
-            <Nav.Link className='navText' href='#Contact'>
+            <Nav.Link className='navText' href='#Contact' onClick={props.contact}>
               Contact
             </Nav.Link>
           </Nav>

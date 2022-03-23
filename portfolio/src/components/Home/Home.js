@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from 'styled-components';
 import Img from '../../images/emile-perron-xrVDYZRGdw4-unsplash.jpeg';
 import Typewriter from 'typewriter-effect';
@@ -200,9 +200,9 @@ justify-content:center;
 
 `;
 
-export const Home = () => {
+export const Home = forwardRef((props, ref) => {
   return (
-    <Section>
+    <Section ref={ref} {...props}>
       <Title>Hector Agudelo-Carmona</Title>
       <Text>
         I am a
@@ -243,4 +243,4 @@ export const Home = () => {
       </Container>
     </Section>
   );
-};
+});

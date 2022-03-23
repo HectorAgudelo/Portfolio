@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from 'styled-components';
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import { device } from '../DeviceScreens/DeviceScreens';
@@ -193,9 +193,9 @@ justify-content:center;
 
 `;
 
-export const ContactInfo = () => {
+export const ContactInfo = forwardRef ((props, ref) => {
   return (
-    <Section>
+    <Section ref={ref} {...props}>
       <Container flexDirectionMobileS='column'>
         <Title
           fontSizeDesktopL='50px'
@@ -330,4 +330,4 @@ export const ContactInfo = () => {
       </Container>
     </Section>
   );
-};
+});

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from 'styled-components';
 import { ProjectModalRender } from '../ProjectModalRender/ProjectModalRender';
 import { device } from '../DeviceScreens/DeviceScreens';
@@ -222,9 +222,9 @@ text-shadow: ${(props) => props.textShadow};
 
 `;
 
-export const ProjectModalContainer = () => {
+export const ProjectModalContainer = forwardRef((props, ref) => {
   return (
-    <Section
+    <Section ref={ref} {...props}
       flexDirection='column'
       alignItems='center'
       marginDesktopL='0px 200px'
@@ -313,4 +313,4 @@ export const ProjectModalContainer = () => {
       </Container>
     </Section>
   );
-};
+});

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import myself from '../../images/Self.jpg';
 import styles from 'styled-components';
 import './About.css';
@@ -250,9 +250,9 @@ width: auto;
 
 `;
 
-export const About = () => {
+export const About = forwardRef((props, ref)=>{
   return (
-    <Container>
+    <Container ref={ref} {...props}>
       <Section flexDirection='column' alignItems='center'>
         <Title
           titleAlign='center'
@@ -363,4 +363,4 @@ export const About = () => {
       </Section>
     </Container>
   );
-};
+});
