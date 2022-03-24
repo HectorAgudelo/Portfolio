@@ -6,7 +6,7 @@ import { NavigationBar } from './components/NavigationBar/NavigationBar';
 import { ProjectModalContainer } from './components/ProjectModalContainer/ProjectModalContainer';
 import './App.css';
 import { ContactInfo } from './components/ContactInfo/ContactInfo';
-import { useRef } from 'react';
+import React,{ useRef } from 'react';
 
 import './App.css';
 
