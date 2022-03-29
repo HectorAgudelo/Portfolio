@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import './NavigationBar.css';
 
@@ -12,8 +12,10 @@ export const NavigationBar = (props) => {
       setBackgroundColor(false);
     }
   };
+  useRef(() => {
+    window.addEventListener('scroll', changeBackground);
+  }, []);
 
-  window.addEventListener('scroll', changeBackground);
   return (
     <Navbar
       collapseOnSelect
@@ -38,10 +40,18 @@ export const NavigationBar = (props) => {
             <Nav.Link className='navText' href='#About' onClick={props.about}>
               About
             </Nav.Link>
-            <Nav.Link className='navText' href='#Projects' onClick={props.projects}>
+            <Nav.Link
+              className='navText'
+              href='#Projects'
+              onClick={props.projects}
+            >
               Projects
             </Nav.Link>
-            <Nav.Link className='navText' href='#Contact' onClick={props.contact}>
+            <Nav.Link
+              className='navText'
+              href='#Contact'
+              onClick={props.contact}
+            >
               Contact
             </Nav.Link>
           </Nav>
